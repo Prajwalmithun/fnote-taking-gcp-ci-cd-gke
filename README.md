@@ -7,6 +7,22 @@ Minimal Note Taking App
 [Note Taking App](http://fnotes.vanquisher.in/login?next=%2F)
 -->
 
+# To run locally 
+
+1. Clone this repo 
+
+2. Create a virtual environment and install the dependent packages
+
+```
+# virtualenv venv
+
+# source venv/bin/activate
+
+# pip3 install -r requirements.txt
+
+# python3 main.py
+```
+
 ## Sample images
 
 ![Signup Page](images/signup.png "Sign Up Page")
