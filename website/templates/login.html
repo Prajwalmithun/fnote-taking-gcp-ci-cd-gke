@@ -27,7 +27,14 @@
 <br>
 <!-- submit button-->
 <button type="submit" class="btn btn-primary"> Login </button>
-
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld4ED0lAAAAAG71-spXDfk2N6HmybuG8RxxXPFh"></script>
+<script>
+grecaptcha.enterprise.ready(function() {
+    grecaptcha.enterprise.execute('6Ld4ED0lAAAAAG71-spXDfk2N6HmybuG8RxxXPFh', {action: 'login'}).then(function(token) {
+       captcha
+    });
+});
+</script>
 <br>
 <a href="/sign-up" id="signUp">New User? Signup here</a>
 </form>
