@@ -7,8 +7,8 @@ app = create_app()
 
 
 # app = Flask(__name__)
-app.config['RECAPTCHA_SITE_KEY'] = '6LcIjUElAAAAAKz8D68ZkvdvhHcTfYsxhJtwWvyf' # <-- Add your site key
-app.config['RECAPTCHA_SECRET_KEY'] = '6LcIjUElAAAAAJKRdXOHpozyG11GLHl_eMC9P8-L' # <-- Add your secret key
+app.config['RECAPTCHA_SITE_KEY'] = '' # <-- Add your site key
+app.config['RECAPTCHA_SECRET_KEY'] = '' # <-- Add your secret key
 recaptcha = ReCaptcha(app) # Create a ReCaptcha object by passing in 'app' as parameter
 
 
