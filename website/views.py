@@ -7,6 +7,7 @@ from .models import Note
 from . import db
 import json
 
+
 # Creating a blueprint
 # syntax: Blueprint(<name of the view>,__name__)
 views = Blueprint('views', __name__)

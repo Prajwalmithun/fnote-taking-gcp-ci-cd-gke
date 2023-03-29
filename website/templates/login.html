@@ -25,16 +25,29 @@
         <input type="password" class="form-control" id="password1" name="password" placeholder="Password">
     </div>
 <br>
-<!-- submit button-->
-<button type="submit" class="btn btn-primary"> Login </button>
-<script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld4ED0lAAAAAG71-spXDfk2N6HmybuG8RxxXPFh"></script>
+
+
+<form method="POST"> <!-- Sends POST request to flask server -->
+    {{ recaptcha }} <!-- Refer to 'recaptcha' variable in main.py -->
+    <button type="submit" class="btn btn-primary"> Login </button>
+</form>
+
+<!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld4ED0lAAAAAG71-spXDfk2N6HmybuG8RxxXPFh"></script>
+<form action="?" method="POST">
+              <div class="g-recaptcha" data-sitekey="6Ld4ED0lAAAAAG71-spXDfk2N6HmybuG8RxxXPFh" data-action="LOGIN"></div>
+              <br/>
+              <input type="submit" value="Submit">
+            </form> -->
+
+<!-- For reCapcha--> 
+<!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld4ED0lAAAAAG71-spXDfk2N6HmybuG8RxxXPFh"></script>
 <script>
 grecaptcha.enterprise.ready(function() {
     grecaptcha.enterprise.execute('6Ld4ED0lAAAAAG71-spXDfk2N6HmybuG8RxxXPFh', {action: 'login'}).then(function(token) {
-       captcha
+
     });
 });
-</script>
+</script> -->
 <br>
 <a href="/sign-up" id="signUp">New User? Signup here</a>
 </form>
