@@ -7,7 +7,6 @@ from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from flask_login import login_user, login_required, logout_user, current_user, UserMixin
-
 auth = Blueprint('auth', __name__)
 
 @auth.route('/login', methods=['GET','POST'])
@@ -26,7 +25,6 @@ def login():
             email = request.form.get('email')
             password = request.form.get('password')
             user = User.query.filter_by(email=email).first()
-            
             if check_password_hash(user.password,password):
                 flash('Logged in Successfully!', category='success')
                 
