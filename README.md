@@ -7,6 +7,9 @@ Minimal Note Taking App
 [Note Taking App](http://fnotes.vanquisher.in/login?next=%2F)
 -->
 
+# Architecture Diagarm
+![arch diagram](images/cicd-gke-img.png)
+
 # To run locally 
 
 1. Clone this repo 
