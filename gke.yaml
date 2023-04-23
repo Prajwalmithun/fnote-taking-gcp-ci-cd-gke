@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: fnote-taking-gke-deploy
+  name: fnote-taking-gke-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fnote-taking-gke-deploy
+  template:
+    metadata:
+      labels:
+        app: fnote-taking-gke-deploy
+    spec:
+      containers:
+      - image: gcr.io//fnote-taking-gke-dev
+        name: fnote-taking-gke-dev
+        ports:
+          - containerPort: 5000
+        env:
+          - name: PORT
+            value: "5000"
