@@ -1,9 +1,9 @@
 steps:
 # This step will build and push new container image to "google container registry(GCR)"
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/fnote-taking-gke-dev', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/fnote-taking-gke-prod', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/fnote-taking-gke-dev']
+  args: ['push', 'gcr.io/$PROJECT_ID/fnote-taking-gke-prod']
 
 # # This step will deploy the new container image to cloud run
 # - name: 'gcr.io/cloud-builders/gcloud'
@@ -14,7 +14,7 @@ steps:
   args:
      - run
      - --filename=gke.yaml
-     - --image=gcr.io/$PROJECT_ID/fnote-taking-gke-dev
+     - --image=gcr.io/$PROJECT_ID/fnote-taking-gke-prod
      - --location=us-central1-c
      - --cluster=cluster-1
-     - --namespace=dev
+     - --namespace=prod

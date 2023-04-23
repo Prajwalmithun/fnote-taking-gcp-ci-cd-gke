@@ -15,7 +15,7 @@ spec:
         app: fnote-taking-gke-deploy
     spec:
       containers:
-      - image: gcr.io/fnote-taking-gcp-ci-cd-gke/fnote-taking-gke-dev:latest 
+      - image: gcr.io/fnote-taking-gcp-ci-cd-gke/fnote-taking-gke-prod:latest 
         name: fnote-taking-gke-dev
         ports:
           - containerPort: 5000
