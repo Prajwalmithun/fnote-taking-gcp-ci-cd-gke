@@ -22,4 +22,21 @@ spec:
         env:
           - name: PORT
             value: "5000"
-
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: fnote-taking-gke-deploy
+    app.kubernetes.io/managed-by: gcp-cloud-build-deploy
+  name: fnote-taking-gke-deploy
+  namespace: dev
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: fnote-taking-gke-deploy
+  type: "LoadBalancer"
