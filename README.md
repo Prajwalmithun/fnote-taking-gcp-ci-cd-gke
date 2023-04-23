@@ -1,4 +1,4 @@
-# Simple Note Taking App using Flask
+# Simple Note Taking App using Flask - Dev Stage
 
 Minimal Note Taking App 
 
