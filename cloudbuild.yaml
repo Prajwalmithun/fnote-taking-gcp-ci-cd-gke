@@ -10,11 +10,11 @@ steps:
 #   args: ['run','deploy', 'fnote-taking-service', '--image=gcr.io/$PROJECT_ID/fnote-taking', '--region=us-west4', '--allow-unauthenticated']
 
 # This step is to deploy container to GKE 
-# - name: 'gcr.io/cloud-builders/gke-deploy'
-#   args:
-#      - run
-#      - --filename=gke.yaml
-#      - --image=gcr.io/$PROJECT_ID/fnote-taking-gke-dev
-#      - --location=us-central1-c
-#      - --cluster=cluster-1
-#      - --namespace=dev
+- name: 'gcr.io/cloud-builders/gke-deploy'
+  args:
+     - run
+     - --filename=gke.yaml
+     - --image=gcr.io/$PROJECT_ID/fnote-taking-gke-dev
+     - --location=us-central1-c
+     - --cluster=cluster-1
+     - --namespace=dev
